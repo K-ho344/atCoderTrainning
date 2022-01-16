@@ -1,0 +1,270 @@
+// {
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	
+// }
+
+{
+	"Print to console": {
+        "prefix": "cpptemplate",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "",
+            "using namespace std;",
+            "",
+            "int main() {",
+            "   cin.tie(0);",
+            "   ios_base::sync_with_stdio(false);",
+            "\t$0",
+            "   return 0;",
+            "}"
+        ],
+        "description": "cpp_template"
+    },
+    "nyuryoku" : {
+        "prefix":"nyuryoku",
+        "body": [
+            "cin >> ${1:name};"
+            ],
+        "description": "標準入力に対するコード スニペット"
+    },
+    "shuturyoku" : {
+        "prefix":"shuturyoku",
+        "body": [
+            "cout << ${1:ans} << endl;"
+            ],
+        "description": "標準出力に対するコード スニペット"
+    },
+    "~": {
+        "prefix": "~",
+        "body": [
+            "~${1:typename}() {",
+            "\t$0",
+            "}",
+            ],
+        "description": "デストラクターに対するコード スニペット"
+    },
+    "class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:name} {",
+            "\tpublic:",
+            "\t\t${1:name}();",
+            "\t\t~${1:name}();",
+            "",
+            "\tprivate:",
+            "\t\t${0:}",
+            "};",
+            "",
+            "${1:name}::${1:name}() {",
+            "}",
+            "",
+            "${1:name}::~${1:name}() {",
+            "}",
+            ],
+        "description": "クラスに対するコード スニペット"
+    },
+    "classi": {
+        "prefix": "classi",
+        "body": [
+            "class ${1:name} {",
+            "\tpublic:",
+            "\t\t${1:name}() {",
+            "\t\t}",
+            "\t\t~${1:name}() {",
+            "\t\t}",
+            "",
+            "\tprivate:",
+            "\t\t${0:}",
+            "};"
+            ],
+        "description": "インライン コンストラクター/デストラクターを含むクラスに対するコード スニペット"
+    },
+    "ctor": {
+        "prefix": "ctor",
+        "body": [
+            "${1:typename}() {",
+            "\t${0:}",
+            "};"
+            ],
+        "description": "コンストラクターに対するコード スニペット"
+    },
+    "do": {
+        "prefix": "do",
+        "body": [
+            "do {",
+            "\t${0:}",
+            "} while(${1:expression});"
+            ],
+        "description": "do...while ループに対するコード スニペット"
+    },
+    "else": {
+        "prefix": "else",
+        "body": [
+            "else {",
+            "\t${0:}",
+            "}",
+            ],
+        "description": "else ステートメントに対するコード スニペット"
+    },
+    "enum": {
+        "prefix": "enum",
+        "body": [
+            "enum ${1:name} {",
+            "\t${0:}",
+            "}",
+            ],
+        "description": "列挙型に対するコード スニペット"
+    },
+    "enumclass": {
+        "prefix": "enumclass",
+        "body": [
+            "enum class${1:name} {",
+            "\t${0:}",
+            "}",
+            ],
+        "description": "列挙型クラスのコード スニペット"
+    },
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for (${1:type} ${2:index} = 0; ${2:index} < ${3:length}; ${2:index}++) {",
+            "\t${0:}",
+            "}"
+            ],
+        "description": "for ループに対するコード スニペット"
+    },
+    "foreach": {
+        "prefix": "foreach",
+        "body": [
+            "for  each (${1:type} ${2:indentifier} in ${3:collection}) {",
+            "\t${0:}",
+            "}"
+            ],
+        "description": "foreach ステートメントに対するコード スニペット"
+    },
+    "forr": {
+        "prefix": "forr",
+        "body": [
+            "for (${1:type} ${2:index} = 0; ${2:index} > ${3:length}; ${2:index}--) {",
+            "\t${0:}",
+            "}"
+            ],
+        "description": "逆向き for ループに対するコード スニペット"
+    },
+    "if": {
+        "prefix": "if",
+        "body": [
+            "if(${1:true}) {",
+            "\t${0:}",
+            "}",
+            ],
+        "description": "if ステートメントに対するコード スニペット"
+    },
+    "ifelse": {
+        "prefix": "ifelse",
+        "body": [
+            "if(${1:true}) {",
+            "\t${0:}",
+            "} else {",
+            "}"
+            ],
+        "description": "if else ステートメントに対するコード スニペット"
+    },
+    "namespace": {
+        "prefix": "namespace",
+        "body": [
+            "namespace ${1:name}) {",
+            "\t${0:}",
+            "}",
+            ],
+        "description": "名前空間に対するコード スニペット"
+    },
+    "pif": {
+        "prefix": "pif",
+        "body": [
+            "#if ${1:expression}",
+            "\t${0:}",
+            "#endif //${1:expression}",
+            ],
+        "description": "#if に対するコード スニペット"
+    },
+    "pifdef": {
+        "prefix": "pifdef",
+        "body": [
+            "#ifdef ${1:expression}",
+            "\t${0:}",
+            "#endif //${1:expression}",
+            ],
+        "description": "#ifdef に対するコード スニペット"
+    },
+    "pifndef": {
+        "prefix": "pifndef",
+        "body": [
+            "#ifndef ${1:expression}",
+            "\t${0:}",
+            "#endif //${1:expression}",
+            ],
+        "description": "#ifndef に対するコード スニペット"
+    },
+    "rfor": {
+        "prefix": "rfor",
+        "body": [
+            "for (auto& ${1:variable} : ${2:range}) {",
+            "\t${0:}",
+            "}"
+            ],
+        "description": "'範囲ベースの for' ループに対するコード スニペット"
+    },
+    "switch": {
+        "prefix": "switch",
+        "body": [
+            "switch (${1:expression}) {",
+            "\tdefault:",
+            "\tbreak;${0:}",
+            "}"
+            ],
+        "description": "switch ステートメントに対するコード スニペット"
+    },
+    "try": {
+        "prefix": "try",
+        "body": [
+            "try {",
+            "\t${1:}",
+            "}",
+            "catch (const std::exception&) {",
+            "\t${0:}",
+            "}"
+            ],
+        "description": "try catch に対するコード スニペット"
+    },
+    "union": {
+        "prefix": "union",
+        "body": [
+            "union ${1:name} {",
+            "\t${0:}",
+            "}"
+            ],
+        "description": "共用体に対するコード スニペット"
+    },
+    "while": {
+        "prefix": "while",
+        "body": [
+            "while (${1:expression}) {",
+            "\t${0:}",
+            "}"
+            ],
+        "description": "while ループに対するコード スニペット"
+    }
+}
